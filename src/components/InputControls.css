@@ -26,3 +26,14 @@
 	resize: none;
 	font-family: 'Acme', sans-serif;
 }
+@media screen and (max-width: 600px) {
+	.Controls {
+		width: 50vw;
+		left: 25vw;
+	}
+}
+@media screen and (max-height: 560px) {
+	.Controls {
+		bottom: 1vh;
+	}
+}
