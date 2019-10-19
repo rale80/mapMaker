@@ -100,6 +100,16 @@ class GoogleMap extends React.Component {
 		});
 	};
 
+	centerMap = (mapProps, map) => {
+		map.setCenter(this.state.mapCenter);
+	};
+
+	centerMovedHandler = (mapProps, map) => {
+		this.setState({
+			mapCenter: { lat: map.center.lat(), lng: map.center.lng() }
+		});
+	};
+
 	handleUpdateMarkers = bulkMarkers => {
 		this.setState({ markers: [...this.state.markers, ...bulkMarkers] });
 	};
@@ -122,7 +132,9 @@ class GoogleMap extends React.Component {
 					zoom={12}
 					gestureHandling="cooperative"
 					initialCenter={this.state.mapCenter}
-					onClick={this.addMarker}>
+					onClick={this.addMarker}
+					onDragend={this.centerMovedHandler}
+					onReady={this.centerMap}>
 					{this.displayMarkers()}
 
 					<InfoWindow
