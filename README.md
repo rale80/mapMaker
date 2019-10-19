@@ -15,4 +15,4 @@ for example:
 ......................
 ```
 
-You can see demo on: [Map Maker App](http://localhost:3000)
+You can see demo on: [Map Maker App](http://map-maker-react.s3-website.eu-central-1.amazonaws.com)
