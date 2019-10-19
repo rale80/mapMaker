@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+.Controls {
+	position: absolute;
+	width: 30vw;
+	bottom: 8vh;
+	left: 35vw;
+}
+.Controls button {
+	display: block;
+	width: 100%;
+	padding: 5px 0;
+	margin: 5px auto 0;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 2px solid #b9b9b9;
+	font-family: 'Acme', sans-serif;
+}
+.Controls button:hover {
+	box-shadow: 0 0 3px rgba(124, 71, 11, 0.4);
+}
+.Controls textarea {
+	display: block;
+	width: 98%;
+	height: 15vh;
+	margin: auto;
+	resize: none;
+	font-family: 'Acme', sans-serif;
+}

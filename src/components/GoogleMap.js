@@ -1,6 +1,7 @@
 import React from 'react';
 import uuid from 'uuid';
 import { GoogleApiWrapper, Map, Marker, InfoWindow } from 'google-maps-react';
+import InputControls from './InputControls';
 
 class GoogleMap extends React.Component {
 	state = {
@@ -99,6 +100,10 @@ class GoogleMap extends React.Component {
 		});
 	};
 
+	handleUpdateMarkers = bulkMarkers => {
+		this.setState({ markers: [...this.state.markers, ...bulkMarkers] });
+	};
+
 	render() {
 		const styles = {
 			border: '2px solid rgb(0, 0, 0, 0.2)',
@@ -134,6 +139,8 @@ class GoogleMap extends React.Component {
 						)}
 					</InfoWindow>
 				</Map>
+
+				<InputControls updateMarkers={this.handleUpdateMarkers} />
 			</>
 		);
 	}
