@@ -14,5 +14,3 @@ for example:
 15.34534,32.54324,blue
 ......................
 ```
-
-You can see demo on: [Map Maker App](http://map-maker-react.s3-website.eu-central-1.amazonaws.com)
